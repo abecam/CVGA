@@ -1,2 +1,2 @@
 # CVGA
-The Collective of Video Game Artisan
+The Collective of Video Game Artisans
