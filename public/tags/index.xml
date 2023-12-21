@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on The Collective of Video Game Artisans</title>
+    <link>https://thefilter.shop/CGVA/tags/</link>
+    <description>Recent content in Tags on The Collective of Video Game Artisans</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Oct 2020 06:19:00 -0700</lastBuildDate>
+    <atom:link href="https://thefilter.shop/CGVA/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>family_friendly</title>
+      <link>https://thefilter.shop/CGVA/tags/family_friendly/</link>
+      <pubDate>Tue, 06 Oct 2020 06:19:00 -0700</pubDate>
+      <guid>https://thefilter.shop/CGVA/tags/family_friendly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>kid_friendly</title>
+      <link>https://thefilter.shop/CGVA/tags/kid_friendly/</link>
+      <pubDate>Tue, 06 Oct 2020 06:19:00 -0700</pubDate>
+      <guid>https://thefilter.shop/CGVA/tags/kid_friendly/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>no_ads</title>
+      <link>https://thefilter.shop/CGVA/tags/no_ads/</link>
+      <pubDate>Tue, 06 Oct 2020 06:19:00 -0700</pubDate>
+      <guid>https://thefilter.shop/CGVA/tags/no_ads/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>no_iap</title>
+      <link>https://thefilter.shop/CGVA/tags/no_iap/</link>
+      <pubDate>Tue, 06 Oct 2020 06:19:00 -0700</pubDate>
+      <guid>https://thefilter.shop/CGVA/tags/no_iap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>premium</title>
+      <link>https://thefilter.shop/CGVA/tags/premium/</link>
+      <pubDate>Tue, 06 Oct 2020 06:19:00 -0700</pubDate>
+      <guid>https://thefilter.shop/CGVA/tags/premium/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
