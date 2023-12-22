@@ -1,6 +1,6 @@
 ---
-title: "Our games"
-description: "The studios of the Collective and their games."
+title: "Our content creators"
+description: "The content creators of the Collective."
 
 showLikes: true
 showViews: true
@@ -11,10 +11,11 @@ cascade:
   showSummary: false
   showLikes: false
   showViews: false
+tags: ["content_creators"]
 ---
 
 {{< lead >}}
-The studios of the Collective and their games.
+The content creators of the Collective.
 {{< /lead >}}
 
 ---

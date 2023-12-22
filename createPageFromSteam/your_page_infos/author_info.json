@@ -1,15 +1,11 @@
 {
-    "name": "Your Name",
+    "name": "The Giant Ball",
     "image" : "img/your_avatar.png",
-    "bio": "A super duper content creator",
+    "bio": "The Giant Ball, the Collective creator studio, created in 2006 for the weird game of the same name, and still haven't generated any kind of revenue. Will it changes any time soon? Probably not...",
     "social": [
-        { "linkedin": "https://linkedin.com/in/OOOOOOO" },
-        { "twitter": "https://twitter.com/OOOOOOO" },
-        { "instagram": "https://instagram.com/OOOOOOO" },
-        { "medium": "https://medium.com/@OOOOOOO" },
-        { "github": "https://github.com/OOOOOOO" },
-        { "goodreads": "http://goodreads.com/OOOOOOO" },
-        { "keybase": "https://keybase.io/OOOOOOO" },
-        { "reddit": "https://reddit.com/user/OOOOOOO" }
+        { "linkedin": "https://www.linkedin.com/in/abecam/" },
+        { "twitter": "https://twitter.com/abecam22" },
+        { "github": "https://github.com/abecam/" },
+        { "reddit": "https://www.reddit.com/user/Mental_Philosopher_5" }
     ]
 }

@@ -11,17 +11,17 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "Our Studios"
-  pageRef = "games"
+  name = "Studios"
+  pageRef = "studios"
   weight = 10
 
 [[main]]
-  name = "Our services"
+  name = "Services"
   pageRef = "services"
   weight = 15
 
 [[main]]
-  name = "Our content creators"
+  name = "Content creators"
   pageRef = "content_creators"
   weight = 16
 
@@ -30,15 +30,15 @@
   pageRef = "friends"
   weight = 20
 
-#[[main]]
-#  name = "Categories"
-#  pageRef = "categories"
-#  weight = 20
+[[main]]
+  name = "How to"
+  pageRef = "docs"
+  weight = 25
 
 [[main]]
   identifier = "twitter"
   pre = "x-twitter"
-  url = "https://twitter.com/cvga" # TBC
+  url = "https://twitter.com/abecam22" # TBC
   weight = 200
 
 [[main]]

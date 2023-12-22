@@ -1,6 +1,6 @@
 ---
-title: "Our friends"
-description: "The friends of the Collective."
+title: "Our games"
+description: "The studios of the Collective and their games."
 
 showLikes: true
 showViews: true
@@ -11,11 +11,12 @@ cascade:
   showSummary: false
   showLikes: false
   showViews: false
-tags: ["friends"]
+
+tags: ["studios", "games"]
 ---
 
 {{< lead >}}
-The friends of the Collective.
+The studios of the Collective and their games.
 {{< /lead >}}
 
 ---

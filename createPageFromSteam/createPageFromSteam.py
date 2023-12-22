@@ -49,9 +49,10 @@ def addStudioInfo(studio_name, name_of_folder):
         main_page.write("date: "+datetime.today().strftime("%Y-%m-%d"))
         main_page.write("\nshowAuthor: false")
         main_page.write("\nauthors:\n - \""+name_of_folder+"\"")
+        main_page.write("\ntags: [\"studio\", \"games\"]")
         main_page.write("\n---")
         main_page.write("\n")
-        main_page.write(f"# {studio_name}\n")
+        #main_page.write(f"# {studio_name}\n")
 
 def writeDataFromSteam(name_of_folder, content, id):
     # Create Video Game from JSON data
@@ -60,12 +61,8 @@ def writeDataFromSteam(name_of_folder, content, id):
     if content['required_age'] == "18":
         print(f"Sorry, no mature content in the filter shop. {content['name']} cannot be added.")
         return
-    # Missing: game type, studio, publisher, platforms, vignette, link to shop (should be obvious)
 
-    # creating images
-    # header_image
-
-    # capsule_image
+    addName(name=content['name'])
     #
     addCapsuleAndHeader(content['name'],content['capsule_image'], content['header_image'])
 
@@ -77,7 +74,7 @@ def writeDataFromSteam(name_of_folder, content, id):
     # path_full	"https://cdn.akamai.steamstatic.com/steam/apps/1378660/ss_509aa0dc74d06b8a3544d62f2fd5b0b235c2ab84.1920x1080.jpg?t=1687509345"
     addAllThumbnails(content['name'],content['screenshots'])
 
-    addGeneralInfo(name=content['name'], description=content['short_description'],
+    addGeneralInfo(description=content['short_description'],
                                          url=content['website'])
 
     # studio(s) and publisher(s)
@@ -96,6 +93,10 @@ def writeDataFromSteam(name_of_folder, content, id):
     # link to shop: f"https://store.steampowered.com/app/{id}"
     print("Information fetched successfully.")
 
+def addName(name):
+    with open("index.md", "a", encoding="utf-8") as main_page:
+        main_page.write("\n\n")
+        main_page.write("## "+name)
 
 def addCapsuleAndHeader(game_name, capsule_url, header_url):
     usable_name = slugify(game_name)
@@ -198,16 +199,18 @@ def addAllThumbnails(game_name, thumbnails):
         with open("../index.md", "a", encoding="utf-8") as main_file:
             main_file.write(f"<img src=\"img/{file_name}\" class=\"grid-w50\" />\n")
 
+        if nb_thumbnail == 5 :
+            break
+
     os.chdir("..")
     with open("index.md", "a", encoding="utf-8") as main_file:
         main_file.write("{{< /gallery >}}\n")
 
-def addGeneralInfo(name, description, url):
+def addGeneralInfo(description, url):
     with open("index.md", "a", encoding="utf-8") as main_page:
         main_page.write("\n\n")
-        main_page.write("## "+name)
-        main_page.write("\n\n")
         main_page.write(description)
+        main_page.write(f"\n\n<a target=\"_blank\" href=\"{url}\">Website</a>")
 
 def addStudioAndPublisher(developers, publishers):
     with open("index.md", "a", encoding="utf-8") as main_page:
@@ -218,18 +221,29 @@ def addStudioAndPublisher(developers, publishers):
 
         for one_entry in publishers:
            main_page.write("\n\n")
-           main_page.write(f"### Published by {one_entry}\n")
+           main_page.write(f"#### Published by {one_entry}\n")
 
 
 def addPlatforms(platforms):
     with open("index.md", "a", encoding="utf-8") as main_page:
         main_page.write("\n\n")
+        is_first = True
         # currently only a boolean for Windows, Linux and Mac
         if platforms['windows']:
-            main_page.write("Windows")
+            if not is_first:
+                main_page.write(", ")
+            else:
+                is_first = False
+            main_page.write("Windows  ")
         if platforms['linux']:
-            main_page.write("Linux")
+            if not is_first:
+                main_page.write(", ")
+            else:
+                is_first = False
+            main_page.write("Linux  ")
         if platforms['mac']:
+            if not is_first:
+                main_page.write(", ")
             main_page.write("Mac")
 
 def addCategories(genres):
@@ -255,7 +269,7 @@ def generateFromListOfGamesAndStudioName():
         studio_name = source_file.readline().rstrip()
         name_of_folder = source_file.readline().rstrip()
 
-        os.chdir("../content/games/")
+        os.chdir("../content/studios/")
         if os.path.isdir(name_of_folder):
             print(f"Sorry, the folder {name_of_folder} already exists")
             return
@@ -271,6 +285,14 @@ def generateFromListOfGamesAndStudioName():
         with open("your_page_infos/author_info.json") as author_info :
             data_author = json.load(author_info)
             data_author["image"] = "img/" + avatar_file_name
+            name_of_author = data_author["name"]
+            # Create a simple author page
+            os.makedirs(f"../content/authors/{name_of_folder}")
+            with open(f"../content/authors/{name_of_folder}/_index.md", "a", encoding="utf-8") as author_file:
+                author_file.write("---\n")
+                author_file.write(f"title: \"{name_of_author}\"\n")
+                author_file.write("---\n\n")
+                author_file.write(data_author["bio"])
 
             with open(author_json_file_name, 'w') as json_file:
                 json.dump(data_author, json_file)
@@ -278,7 +300,7 @@ def generateFromListOfGamesAndStudioName():
 
         shutil.copyfile("your_page_infos/your_avatar.png", "../assets/img/" + avatar_file_name)
 
-        os.chdir("../content/games")
+        os.chdir("../content/studios")
         os.chdir(name_of_folder)
 
         while id := source_file.readline().rstrip():

@@ -1,6 +1,6 @@
 ---
-title: "Our games"
-description: "The studios of the Collective and their games."
+title: "Our services"
+description: "The services of the Collective."
 
 showLikes: true
 showViews: true
@@ -11,10 +11,11 @@ cascade:
   showSummary: false
   showLikes: false
   showViews: false
+tags: ["services"]
 ---
 
 {{< lead >}}
-The studios of the Collective and their games.
+The services of the Collective: assets, translations, development, test, ...
 {{< /lead >}}
 
 ---
