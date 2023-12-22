@@ -1,5 +1,5 @@
 ---
-title: "Our games"
+title: "Our studios"
 description: "The studios of the Collective and their games."
 
 showLikes: true
