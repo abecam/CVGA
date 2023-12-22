@@ -17,8 +17,8 @@ mainSections = ["games"]
 
 disableImageOptimization = false
 
-defaultBackgroundImage = "/img/Background2.png"
-defaultFeaturedImage = "/img/Background2.png"
+defaultBackgroundImage = "/img/Background.png"
+defaultFeaturedImage = "/img/Background.png"
 
 highlightCurrentMenuArea = true
 smartTOC = true
