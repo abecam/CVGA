@@ -2,8 +2,8 @@
 title: "Our services"
 description: "The services of the Collective."
 
-showLikes: true
-showViews: true
+showLikes: false
+showViews: false
 
 cascade:
   showEdit: false

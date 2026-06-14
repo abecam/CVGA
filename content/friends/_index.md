@@ -2,8 +2,8 @@
 title: "Our friends"
 description: "The friends of the Collective."
 
-showLikes: true
-showViews: true
+showLikes: false
+showViews: false
 
 cascade:
   showEdit: false

@@ -2,8 +2,8 @@
 title: "Our studios"
 description: "The studios of the Collective and their games."
 
-showLikes: true
-showViews: true
+showLikes: false
+showViews: false
 
 cascade:
   showEdit: false

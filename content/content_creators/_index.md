@@ -2,8 +2,8 @@
 title: "Our content creators"
 description: "The content creators of the Collective."
 
-showLikes: true
-showViews: true
+showLikes: false
+showViews: false
 
 cascade:
   showEdit: false
